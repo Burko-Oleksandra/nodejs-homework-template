@@ -33,7 +33,7 @@ const registerSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required().messages({
     "any.required": `missing field email`,
   }),
-  password: Joi.string().min(8).required().messages({
+  password: Joi.string().min(6).required().messages({
     "any.required": `missing field password`,
   }),
   subscription: Joi.string(),
@@ -44,7 +44,7 @@ const loginSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required().messages({
     "any.required": `missing field email`,
   }),
-  password: Joi.string().min(8).required().messages({
+  password: Joi.string().min(6).required().messages({
     "any.required": `missing field password`,
   }),
   token: Joi.string(),
